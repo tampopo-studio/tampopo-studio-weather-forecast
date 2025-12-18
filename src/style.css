@@ -1,0 +1,151 @@
+body {
+  background: linear-gradient(
+    -70deg,
+    rgb(233, 222, 250) 0%,
+    rgb(251, 252, 219) 100%
+  );
+  margin-bottom: 100%;
+  font-family: "IBM Plex Mono", monospace;
+  color: rgb(8, 8, 8);
+}
+a {
+  color: #cf8a63;
+}
+
+.city-search-weather {
+  background: linear-gradient(
+    -70deg,
+    rgb(233, 222, 250) 0%,
+    rgb(251, 252, 219) 35%
+  );
+  max-width: 700px;
+  max-height: 477px;
+  margin: 60px auto 10px;
+  padding: 30px 30px 5px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  border-radius: 16px;
+}
+
+header {
+  margin: 15px 10px;
+}
+.text-field {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  width: 75%;
+  padding: 15px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+}
+input {
+  text-transform: uppercase;
+}
+input:focus {
+  outline-color: #eae1f8;
+}
+.submit-button {
+  background-color: #f2f83c;
+  border: none;
+  border-radius: 5px;
+  width: 18%;
+  padding: 13px 28px;
+  font-family: "IBM Plex Mono", monospace;
+  color: #080808;
+  font-size: 16px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  margin-left: 3px;
+}
+.submit-button:hover {
+  background-color: #d7d333;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+main {
+  margin: 30px 15px;
+}
+
+.weather-display {
+  display: flex;
+  justify-content: space-between;
+}
+
+.city-name {
+  margin: 0;
+  font-family: "DM Serif Text", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 63px;
+  letter-spacing: 3.5px;
+  margin-block-end: -12px;
+}
+
+.country-name {
+  margin: 0;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: rgb(8, 8, 8, 0.2);
+  font-style: normal;
+  text-transform: uppercase;
+}
+.text-block {
+  position: relative;
+  top: 6px;
+}
+
+.today {
+  font-family: "DM Serif Text";
+  font-size: 32px;
+  font-style: normal;
+  letter-spacing: 1.5px;
+}
+.details {
+  font-size: 18px;
+  font-style: normal;
+  line-height: 1.6;
+}
+.weather-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: -59px;
+  margin-top: -16px;
+}
+
+.weather-icon {
+  width: 200px;
+}
+
+.weather-description {
+  font-size: 18px;
+  margin-top: -25px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.actual-temperature {
+  font-family: "DM Serif Text";
+  font-size: 123px;
+  position: relative;
+  top: -5px;
+  left: -18px;
+}
+
+.celsius {
+  font-family: "DM Serif Text";
+  font-size: 30px;
+  font-weight: 100;
+  position: relative;
+  top: -32px;
+  left: -9px;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  margin: 0;
+  color: rgb(0, 0, 0, 0.5);
+}
