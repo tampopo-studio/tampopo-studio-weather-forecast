@@ -1,4 +1,4 @@
-function showTemperature(response) {
+function refreshWeather(response) {
   let temperatureToDisplay = document.querySelector("#temperature");
   let newTemperature = response.data.temperature.current;
 
@@ -25,6 +25,8 @@ function showTemperature(response) {
 
   temperatureToDisplay.innerHTML = Math.round(newTemperature);
   iconToDisplay.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
+
+  getForecast(response.data.city);
 }
 
 function formatDateAndTime(date) {
@@ -68,7 +70,7 @@ function findDay(date) {
 function searchCity(city) {
   let apiKey = "027a944a8237bdeb2dcbfffteb55oca7";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemperature);
+  axios.get(apiUrl).then(refreshWeather);
 }
 
 function searchEnteredCity(event) {
@@ -78,7 +80,13 @@ function searchEnteredCity(event) {
   searchCity(newCity.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = `027a944a8237bdeb2dcbfffteb55oca7`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
   let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
   let forecastHtml = "";
 
@@ -104,4 +112,3 @@ let city = document.querySelector("#search-form");
 city.addEventListener("submit", searchEnteredCity);
 
 searchCity("Tokyo");
-displayForecast();
