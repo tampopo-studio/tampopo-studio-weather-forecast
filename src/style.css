@@ -168,7 +168,6 @@ main {
 }
 .forecast-icon {
   text-align: center;
-  font-size: 45px;
 }
 .forecast-temperatures {
   text-align: center;
@@ -179,7 +178,10 @@ main {
 }
 .forecast-maxtemp,
 .forecast-mintemp {
-  padding: 0 4px;
+  padding: 0 1px 0 2.5px;
+}
+.forecast-mintemp {
+  color: #747171;
 }
 
 footer {
