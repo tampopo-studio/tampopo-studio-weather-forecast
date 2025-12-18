@@ -25,8 +25,6 @@ function showTemperature(response) {
 
   temperatureToDisplay.innerHTML = Math.round(newTemperature);
   iconToDisplay.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
-
-  console.log(dayToDisplay);
 }
 
 function formatDateAndTime(date) {
@@ -80,7 +78,30 @@ function searchEnteredCity(event) {
   searchCity(newCity.value);
 }
 
+function displayForecast() {
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+<div class="weather-forecast-day">
+        <div class="forecast-date">${day}</div>
+        <div class="forecast-icon">☀️</div>
+        <div class="forecast-temperatures">
+          <div class="forecast-maxtemp">15°</div>
+          <div class="forecast-mintemp">12°</div>
+        </div>
+      </div>`;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let city = document.querySelector("#search-form");
 city.addEventListener("submit", searchEnteredCity);
 
 searchCity("Tokyo");
+displayForecast();

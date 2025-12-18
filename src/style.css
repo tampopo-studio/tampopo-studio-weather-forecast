@@ -143,6 +143,45 @@ main {
   left: -9px;
 }
 
+.weather-forecast {
+  background: linear-gradient(
+    -70deg,
+    rgb(233, 222, 250) 0%,
+    rgb(251, 252, 219) 35%
+  );
+  max-width: 700px;
+  max-height: 477px;
+  margin: 13px auto;
+  padding: 16px 30px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-around;
+}
+.weather-forecast-day {
+  font-family: "DM Serif Text", serif;
+}
+
+.forecast-date {
+  text-align: center;
+  font-size: 20px;
+}
+.forecast-icon {
+  text-align: center;
+  font-size: 45px;
+}
+.forecast-temperatures {
+  text-align: center;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+.forecast-maxtemp,
+.forecast-mintemp {
+  padding: 0 4px;
+}
+
 footer {
   text-align: center;
   font-size: 12px;
