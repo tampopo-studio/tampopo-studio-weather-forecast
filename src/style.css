@@ -107,6 +107,7 @@ main {
   font-style: normal;
   line-height: 1.6;
 }
+
 .weather-image {
   display: flex;
   flex-direction: column;
